@@ -14,9 +14,9 @@ def read(filename):
 
 
 setup(
-    name="evocraft-explore",
+    name="evocraft_ga",
     version="0.1.0",
-    url="https://github.com/shyamsn97/evocraft-explore",
+    url="https://github.com/shyamsn97/evocraft-ga",
     license='MIT',
 
     author="Shyam Sudhakaran",
@@ -25,7 +25,7 @@ setup(
     description="Exploring evolutionary algorithms in Minecraft",
     long_description=read("README.rst"),
 
-    packages=find_packages(include=["evocraft_ga"]),
+    packages=find_packages(include=["evocraft_ga", "evocraft_ga.*"]),
 
     install_requires=[],
 

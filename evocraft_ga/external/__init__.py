@@ -13,5 +13,5 @@
         url = {https://arxiv.org/abs/2012.04751v1}
     }
 """
-from evocraft_ga.external.minecraft_pb2 import *
-from evocraft_ga.external.minecraft_pb2_grpc import *
+# from evocraft_ga.external.minecraft_pb2 import *
+# from evocraft_ga.external.minecraft_pb2_grpc import *
