@@ -3,3 +3,4 @@
 !.gitignore
 !__init__.py
 !replace_eula.py
+!server.properties

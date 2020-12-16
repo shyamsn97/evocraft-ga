@@ -5,12 +5,12 @@ from evocraft_ga.external.minecraft_pb2 import *  # noqa
 
 channel = grpc.insecure_channel("localhost:5001")
 client = minecraft_pb2_grpc.MinecraftServiceStub(channel)
-x = 210
-y = 80
-z = 280
+x = 20
+y = 10
+z = 20
 client.fillCube(
     FillCubeRequest(  # Clear a 20x10x20 working area
-        cube=Cube(min=Point(x=200, y=75, z=275), max=Point(x=210, y=80, z=280)),
+        cube=Cube(min=Point(x=x-10, y=y, z=z-10), max=Point(x=x+10, y=y+10, z=z+10)),
         type=AIR,
     )
 )

@@ -1,0 +1,1 @@
+rm -r /evocraft_ga/external/world

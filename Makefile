@@ -22,7 +22,7 @@ clean-test: ## remove test and coverage artifacts
 	rm -fr .pytest_cache
 
 lint:
-	black evocraft_ga --exclude=evocraft_ga/external
+	black evocraft_ga --exclude=evocraft_ga/external 
 	flake8 evocraft_ga --exclude=evocraft_ga/external
 
 install: clean lint
