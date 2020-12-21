@@ -4,34 +4,34 @@ evocraft-ga
 ## Exploring deep genetic algorithms in Minecraft using https://github.com/real-itu/Evocraft-py
 
 ## Examples
-### 1. Generating random cube structures with DNN using NS-GA (Novelty Search Genetic Algorithm) [code](evocraft_ga/generate_cubes.py)
-```
+1. Generating random cube structures with DNN using NS-GA (Novelty Search Genetic Algorithm) [code](evocraft_ga/generate_cubes.py)
+
 - Neural Networks are optimized by "novelty" measured by the the distance between the structure generated to the structures saved in the Novelty Search cache.
 - Every generation, the top `n` elites are preserved and the rest of the population are culled. The population is then repopulated by copy a random elite's parameters and then mutated (by adding noise to the weights)
-```
+
 ### 2. (WIP) Generating random structures with CPPN using NS-GA (Novelty Search Genetic Algorithm)
 
 Installation
 ------------
 
-### 1. Bring in source from https://github.com/real-itu/Evocraft-py and apply some processing with setup.sh
+1. Bring in source from https://github.com/real-itu/Evocraft-py and apply some processing with setup.sh
 ```
     sh setup.sh
 ```
-### 2. setup server (Only need to run this once)
+1. setup server (Only need to run this once)
 ```
     sh setup_server.sh
 ```
 
 Run the generate cubes example
 -----
-### 1. Start server
+1. Start server
 ```
     sh start_server.sh
 ```
-### 2. Then log into Minecraft, follow steps in https://github.com/real-itu/Evocraft-py and join the server in `localhost`
+1. Then log into Minecraft, follow steps in https://github.com/real-itu/Evocraft-py and join the server in `localhost`
 
-### 3. To run the simple example
+2. To run the simple example
 ```
     python evocraft_ga/generate_cubes.py 
 
@@ -47,7 +47,7 @@ Run the generate cubes example
     --help                     Show this message and exit.
 
 ```
-### 4. Watch the cubes form!
+1. Watch the cubes form!
 
 ### Start of generation:
 ![Alt Text](gifs/out_first.gif)
