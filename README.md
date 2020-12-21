@@ -4,8 +4,10 @@ evocraft-ga
 ## Exploring deep genetic algorithms in Minecraft using https://github.com/real-itu/Evocraft-py
 
 ## Examples
-### 1. Generating random cube structures with DNN using DeepGA [code](evocraft_ga/generate_cubes.py)
-### 2. (WIP) Generating random structures with CPPN using DeepGA
+### 1. Generating random cube structures with DNN using NS-GA (Novelty Search Genetic Algorithm) [code](evocraft_ga/generate_cubes.py)
+- ### Neural Networks are optimized by "novelty" measured by the the distance between the structure generated to the structures saved in the Novelty Search cache.
+- ### Every generation, the top `n` elites are preserved and the rest of the population are culled. The population is then repopulated by copy a random elite's parameters and then mutated (by adding noise to the weights)
+### 2. (WIP) Generating random structures with CPPN using NS-GA (Novelty Search Genetic Algorithm)
 
 Installation
 ------------
@@ -52,6 +54,7 @@ Run the generate cubes example
 ### Cubes formed:
 ![Alt Text](gifs/out_final.gif)
 
+## More example and algorithms coming soon!
 Authors
 -------
 
