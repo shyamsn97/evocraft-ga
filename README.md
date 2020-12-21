@@ -56,8 +56,8 @@ Run the generate cubes example
 ### Cubes formed:
 ![Alt Text](gifs/out_final.gif)
 
-## More example and algorithms coming soon!
+### More example and algorithms coming soon!
 Authors
 -------
 
-### `evocraft-ga` was written by `Shyam Sudhakaran <shyamsnair97@gmail.com>`.
+`evocraft-ga` was written by `Shyam Sudhakaran <shyamsnair97@gmail.com>`.
