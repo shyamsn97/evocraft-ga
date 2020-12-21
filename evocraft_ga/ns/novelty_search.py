@@ -5,10 +5,7 @@ from collections import deque
 
 def cross_entropy(x, y):
     N = x.shape[0]
-    # entropy over dimensions
-#     for i in range(x.shape[-1]):
     ce = -np.sum(y * np.log(x)) / N
-#     np.linalg.norm(x - y)
     return ce 
 
 def mse(x, y):

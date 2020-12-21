@@ -61,11 +61,11 @@ class GeneticAlgorithm:
                 self.spawner.clear_population(self.population_size)
     
     def spawn(self, outputs):
-#         reshaped_outputs = [output.reshape(self.cube_dims, self.cube_dims, self.cube_dims) for output in outputs]
-        argmaxed_outputs = []
+        self.spawner.clear_population(self.population_size)
+        sampled_outputs = []
         for output in outputs:
-            argmaxed_outputs.append(self.sample_block_class(output))
-        self.spawner.populate(argmaxed_outputs)
+            sampled_outputs.append(self.sample_block_class(output))
+        self.spawner.populate(sampled_outputs)
     
     def sample_block_class(self, output):
         arr = np.zeros((self.cube_dims, self.cube_dims, self.cube_dims))

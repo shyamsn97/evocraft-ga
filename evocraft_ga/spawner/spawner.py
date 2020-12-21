@@ -35,7 +35,7 @@ class Spawner:
 
     def _populate_arr(self, arr, x_min, y_min, z_min):
         blocks = []
-        self.clear_blocks(x_min,y_min,z_min)
+        # self.clear_blocks(x_min,y_min,z_min)
         for coord in np.ndindex(arr.shape):
             block = self.create_block(x=x_min+coord[0], y=y_min+coord[1], z=z_min+coord[2], block_type=self.class_dict[arr[coord]])
             blocks.append(block)
