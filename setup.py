@@ -23,7 +23,7 @@ setup(
     author_email="shyamsnair97@gmail.com",
 
     description="Exploring evolutionary algorithms in Minecraft",
-    long_description=read("README.rst"),
+    long_description=read("README.md"),
 
     packages=find_packages(include=["evocraft_ga", "evocraft_ga.*"]),
 
