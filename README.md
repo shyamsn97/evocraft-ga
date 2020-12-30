@@ -11,6 +11,9 @@ evocraft-ga
 
 - [x] Generating random structures with CPPN using NS-GA (Novelty Search Genetic Algorithm) [code](evocraft_ga/notebooks/CPPN.ipynb)
 
+    - An interesting structure generated from the CPPN:
+      ![Alt Text](imgs/cppn_output.png)
+
 - [ ] (WIP) Generating structures with a Graph Neural Network perspective
 
 Installation
