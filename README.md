@@ -40,16 +40,19 @@ Run the generate cubes example
 ```
     python evocraft_ga/generate_cubes.py 
 
-    Options:
-    --population_size INTEGER  Population size
-    --num_generations INTEGER  Number of generations to evolve
-    --num_elites INTEGER       Number of elites for GA
-    --noise_dims INTEGER       Noise dimension to generate structures
-    --cube_dims INTEGER        Dimension of cube to be created
-    --num_neighbors INTEGER    Number of neighbors to use for Novelty Search
-    --num_bcs INTEGER          Number of BCS to save in cache for Novelty Search
-    --noise_stdev FLOAT        Stdev for Noise perturbations
-    --help                     Show this message and exit.
+Options:
+  --population_size INTEGER    Population size
+  --num_generations INTEGER    Number of generations to evolve
+  --num_elites INTEGER         Number of elites for GA
+  --noise_dims INTEGER         Noise dimension to generate structures
+  --cube_dims INTEGER          Dimension of cube to be created
+  --num_neighbors INTEGER      Number of neighbors to use for Novelty Search
+  --num_bcs INTEGER            Number of Behavior Constants to save in cache
+                               for Novelty Search
+  --noise_stdev FLOAT          Stdev for Noise perturbations
+  --criteria FLOAT             Confidence critera for cube type assignment
+  --model_class [linear|cppn]
+  --help                       Show this message and exit.
 
 ```
 4. Watch the cubes form!
