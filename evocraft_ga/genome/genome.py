@@ -6,22 +6,35 @@ import numpy as np
 import typing
 
 from evocraft_ga.nn.linear import Linear
+from evocraft_ga.nn.cppn import CPPN
+
+model_dict = {"linear": Linear, "cppn": CPPN}
+
 
 @attr.s
 class Genome:
     noise_dims: int = attr.ib()
-    cube_dims : int = attr.ib()
-    seeds : typing.List[int] = attr.ib(default=[])
-    noise_stdev : float = attr.ib(default=1.0)
+    cube_dims: int = attr.ib()
+    seeds: typing.List[int] = attr.ib(default=[])
+    noise_stdev: float = attr.ib(default=1.0)
     num_classes: int = attr.ib(default=1)
+    model_class: str = attr.ib(default="linear")
     # set later
+    _model_class = attr.ib(init=False)
     model = attr.ib(init=False)
 
     def __attrs_post_init__(self):
         self._verify_seeds(self.seeds)
-        self.model = Linear(self.noise_dims, self.cube_dims, self.cube_dims, self.cube_dims, num_classes=self.num_classes)
+        self._model_class = model_dict.get(self.model_class, model_dict["linear"])
+        self.model = self._model_class(
+            self.noise_dims,
+            self.cube_dims,
+            self.cube_dims,
+            self.cube_dims,
+            num_classes=self.num_classes,
+        )
         self.initialize_weights()
-        
+
     def _verify_seeds(self, seeds):
         if len(seeds) == 0:
             seeds = [np.random.randint(1, high=2 ** 31 - 1)]
@@ -50,9 +63,8 @@ class Genome:
         self.seeds.append(new_seed)
         self.initialize_weights()
 
-    def generate(self, to_numpy=False, squeeze=False):
-        return self.model.generate(to_numpy=to_numpy, squeeze=squeeze)
-    
+    def generate(self, to_numpy=False, squeeze=False, seed=None):
+        return self.model.generate(to_numpy=to_numpy, squeeze=squeeze, seed=seed)
+
     def copy_parameters(self, genome: Genome):
         self.seeds = copy.deepcopy(genome.seeds)
-    
