@@ -10,5 +10,5 @@ Maybe a submission template
 2. Put any extra setup steps in `custom_setup.sh`
    1. For example, to install from some requirements.txt `custom_setup.sh` may look like:
     ```
-        python -m pip install requirements.txt
+        python -m pip install -r requirements.txt
     ```
