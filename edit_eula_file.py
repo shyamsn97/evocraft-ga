@@ -16,3 +16,4 @@ def edit_file(file_path, find_str, replace_str="eula=True"):
 
 if __name__ == '__main__':
     edit_file()
+
